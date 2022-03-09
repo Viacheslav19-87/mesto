@@ -1,0 +1,20 @@
+.elements {
+  display: grid;
+  grid: repeat(2, 361px) / repeat(3, 282px);
+  gap: 20px 17px;
+  margin: 51px auto 0;
+}
+
+@media screen and (max-width: 1270px) {
+  .elements {
+    grid: repeat(3, 1fr) / repeat(2, 1fr);
+    margin: 40px 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .elements {
+    grid: repeat(6, 361px) / 282px;
+    margin: 36px auto 0;
+  }
+}

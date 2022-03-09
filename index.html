@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+</head>
+<body class="page">
+  <header class="header">
+    <div class="logo">
+      <img src="./images/header__logo.svg" class="header__logo" alt="Надпись место"/> 
+    </div>
+     <div class="header__line"></div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="profile">
+          <div class="profile__container">
+            <img class="profile__avatar" src="./images/avatar_jak.jpg" alt="Аватар Жака"/>
+            <div class="profile__info">
+              <div class="profile__place">
+                <h1 class="profile__title">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button" type="button">
+                  <img class="profile__edit" src="./images/profile__edit.svg" alt="редактировать"/>
+                </button>
+              </div>
+              <p class="profile__subtitle">Исследователь океана</p>
+            </div>
+          </div>
+          <button class="profile__addbutton" type="button">
+            <img class="profile__vector" src="./images/profile__addbutton.svg" alt="добавить"/>
+          </button>
+        </section>
+        <section class="elements">
+          <div class="element">
+            <img class="element__image" src="./images/karach.jpg" alt="Карачаевск"/>
+            <div class="element__maskgroup">
+              <p class="element__title">Карачаевск</p>
+              <button class="element__button" type="button">
+                <img class="element__vector element__vector_active" src="/images/like.svg" alt="Сердечко"/>
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img class="element__image" src="./images/elb.jpg" alt="Гора Эльбрус"/>
+            <div class="element__maskgroup">
+              <p class="element__title">Гора Эльбрус</p>
+              <button  class="element__button" type="button">
+                <img class="element__vector element__vector_active" src="/images/like.svg" alt="Сердечко"/>
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img class="element__image" src="./images/domb.jpg" alt="Домбай"/>
+            <div class="element__maskgroup">
+              <p class="element__title">Домбай</p>
+              <button class="element__button" type="button">
+                <img class="element__vector element__vector_active" src="/images/like.svg" alt="Сердечко"/>
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img class="element__image" src="./images/elb.jpg" alt="Гора Эльбрус"/>
+            <div class="element__maskgroup">
+              <p class="element__title">Гора Эльбрус</p>
+              <button class="element__button" type="button">
+                <img class="element__vector element__vector_active" src="/images/like.svg" alt="Сердечко"/>
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img class="element__image" src="./images/domb.jpg" alt="Домбай"/>
+            <div class="element__maskgroup">
+              <p class="element__title">Домбай</p>
+              <button class="element__button" type="button">
+                <img class="element__vector element__vector_active" src="/images/like.svg" alt="Сердечко"/>
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img class="element__image" src="./images/karach.jpg" alt="Карачаево-Черкессия"/>
+            <div class="element__maskgroup">
+              <p class="element__title">Карачаево-Черкессия</p>
+              <button class="element__button" type="button">
+                <img class="element__vector element__vector_active" src="/images/like.svg" alt="Сердечко"/>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">2022 Протасенко Вячеслав</p>
+      </footer>
+    </div>
+    <div class="popup">
+      <div class="popup__container">
+        <h2 class="popup__heading">Редактировать профиль</h2>
+        <form class="form">
+          <div class="form__container">
+            <input class="form__name" name="name" placeholder="Жак-Ив Кусто"/>
+            <div class="form__text"></div>
+            <input class="form__info" type="text" placeholder="Исследователь океана"/>
+            <div class="form__text"></div>
+          </div>
+          <button class="form__button" type="submit">Сохранить</button>
+        </form>
+        <button class="popup__button-reset" type="button"></button>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

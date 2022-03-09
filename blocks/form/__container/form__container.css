@@ -1,0 +1,14 @@
+.form__container {
+  width: 362px;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  
+}
+
+@media screen and (max-width: 767px) {
+  .form__container {
+    width: 238px;
+    margin: 0 22px;
+  }
+}
