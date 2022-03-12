@@ -12,6 +12,8 @@
   text-align: center;
   margin: 0 auto;
   padding: 0;
+  border: none;
+  justify-content: center;
 }
 
 .form__button:hover {

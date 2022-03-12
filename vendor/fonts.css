@@ -1,16 +1,9 @@
 @font-face {
-  font-family: "Arial", sans-serif;
+  font-family: "Inter Regular", sans-serif;
   font-style: normal;
-  src: url(./fonts/Arial-Black.ttf) format("ttf"),
-    url(./fonts/Arial-Black.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 100;
-  src: url(./fonts/Inter-Thin.woff) format("woff"),
-       url(./fonts/Inter-Thin.woff2) format("Woff2");
+  font-weight: 400;
+  src: url(./fonts/Inter-Regular.woff) format("woff"),
+       url(./fonts/Inter-Regular.woff2) format("Woff2");
 }
 
 @font-face {

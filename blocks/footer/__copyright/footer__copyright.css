@@ -5,16 +5,9 @@
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  margin: 67px 0 0 0;
-}
-
-@media screen and (max-width: 768px) {
-  .footer__copyright {
-    width: 668px;
-    line-height: 17px;
-    flex-direction: row;
-    font-size: 14px;
-  }
+  margin: 0 auto;
+  padding-top: 66px;
+  padding-bottom: 60px;
 }
 
 @media screen and (max-width: 767px) {
@@ -23,5 +16,6 @@
     line-height: 17px;
     flex-direction: row;
     font-size: 14px; 
+    padding: 48px 19px 36px;
   }
 }

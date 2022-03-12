@@ -4,7 +4,7 @@
   position: absolute;
   top: -40px;
   right: -40px;
-  background-image: url(/Images/btn__close.svg);
+  background-image: url(../../../Images/btn__close.svg);
   border: 0;
   background-color: transparent;
 }

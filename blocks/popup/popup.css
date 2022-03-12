@@ -3,27 +3,13 @@
   display: none;
   top: 0;
   bottom: 0;
-  padding: 180px 423px 0;
+  right: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popup:hover {
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-@media screen and (max-width: 1024px) {
-  .popup {
-    padding: 195px 250px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .popup {
-    padding: 150px 150px;
- }
-}
-
-@media screen and (max-width: 767px) {
-  .popup {
-      padding: 123px 19px;
-  }
 }
