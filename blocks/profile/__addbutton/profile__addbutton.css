@@ -6,6 +6,9 @@
   background: #000;
   box-sizing: border-box;
   border-radius: 2px;
+  background-image: url(../../../Images/profile__addbutton.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .profile__addbutton:hover {
@@ -20,6 +23,6 @@
     width: 282px;
     justify-self: center;
     margin-top: 33px;
-    background-size: 16px 16px;
+    background-size: 12px 12px;
   }
 }
