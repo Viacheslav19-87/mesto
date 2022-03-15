@@ -4,4 +4,9 @@
   background: #ffffff;
   text-overflow: ellipsis;
   overflow: hidden;
+  position: relative;
+  max-width: 282px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
