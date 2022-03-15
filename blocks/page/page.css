@@ -12,8 +12,3 @@
     width: 100%;
   }
 }
-*,
-*::before,
-*::after {
-  outline: 1px solid red
-}
