@@ -11,8 +11,9 @@
   font-weight: normal;
   font-size: 14px;
   transition: all 4000s ease-in-out;
-  padding-bottom: 13px;
+  padding-top: 13px;
   outline: none;
+  height: 30px;
 }
 
 .popup__input:last-of-type {
@@ -22,9 +23,9 @@
 
 @media screen and (max-width: 767px) {
   .popup__input {
-    width: 238px;
+    max-width: 238px;
     margin: 0 22px;
-    padding-bottom: 9px;
+    margin-bottom: 9px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
