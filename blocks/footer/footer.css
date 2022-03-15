@@ -12,16 +12,9 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-  .footer {
-    width: 668px;
-    padding: 30px auto 0;
-    }
-}
-
 @media screen and (max-width: 767px) {
   .footer {
-    width: 282px;
-    padding: 48px auto 35px;
-  }
+    max-width: 282px;
+    padding: 30px auto auto 0;
+    }
 }

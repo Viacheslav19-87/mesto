@@ -9,6 +9,11 @@
 
 @media screen and (max-width: 767px) {
   .page {
-    width: 282px;
+    width: 100%;
   }
+}
+*,
+*::before,
+*::after {
+  outline: 1px solid red
 }
