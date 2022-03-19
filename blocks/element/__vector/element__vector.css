@@ -1,8 +1,9 @@
 .element__vector {
   width: 22px;
   height: 19px;
-  align-self: center;
-  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .element__vector:hover {

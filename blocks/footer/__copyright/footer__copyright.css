@@ -1,21 +1,18 @@
 .footer__copyright {
-  width: 880px;
   line-height: 22px;
-  font-family: "Inter", "Arial";
+  margin: 0;
+  font-family: "Inter","Arial";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  margin: 0 auto;
-  padding-top: 66px;
-  padding-bottom: 60px;
+  font-weight: 400;
+  
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
   .footer__copyright {
-    width: 282px;
     line-height: 17px;
-    flex-direction: row;
     font-size: 14px;
-    padding: 48px 19px 36px;
+    
   }
 }

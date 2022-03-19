@@ -1,7 +1,5 @@
 .element__maskgroup {
   display: flex;
-  max-width: 246px;
   justify-content: space-between;
-  padding: 0;
-  margin: 25px auto;   
+  flex-direction: row;
 }

@@ -1,96 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesto</title>
-    <link rel="stylesheet" href="./pages/index.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Mesto</title>
 </head>
-<body class="page">
-  <header class="header">
-      <img src="./image/header__logo.svg" class="header__logo" alt="Надпись место"/>
-      </header>
-      <main class="main">
-        <section class="profile">
-          <div class="profile__container">
-            <img class="profile__avatar" src="./image/avatar_jak.jpg" alt="Аватар Жака"/>
-            <div class="profile__info">
-              <div class="profile__place">
-                <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <button class="profile__edit-button" type="button">
-                  <img class="profile__edit" src="./image/profile__edit.svg" alt="редактировать"/>
-                </button>
-              </div>
-              <p class="profile__subtitle">Исследователь океана</p>
-            </div>
-          </div>
-          <button class="profile__addbutton" type="button">
-          </button>
-        </section>
-        <section class="elements">
+<body>
+  <div class="page">
+    <header class="header">
+       <img src="./images/header__logo.svg" class="header__logo" alt="Логотип проекта Место">
+    </header>  
+    <main class="main">
+    <section  class="profile">
+      <div class="profile__avatar"></div>
+      <div class="profile__info">
+        <div class="profile__place">
+          <p class="profile__title">Жак-Ив Кусто</p>
+          <button class="profile__edit-button" type="button">
+      </div>
+        <p class="profile__subtitle">Исследователь океана</p>
+      </div>
+      <input type="button" value=" " class="profile__addbutton">
+    </section>
+    <section class="elements">
           <div class="element">
-            <img class="element__image" src="./image/karach.jpg" alt="Карачаевск"/>
+            <img class="element__image" src="./images/karach.jpg" alt="Карачаевск"/>
             <div class="element__maskgroup">
               <h2 class="element__title">Карачаевск</h2>
               <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./image/like.svg" alt="Сердечко"/>
+                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
               </button>
             </div>
           </div>
           <div class="element">
-            <img class="element__image" src="./image/elb.jpg" alt="Гора Эльбрус"/>
+            <img class="element__image" src="./images/elb.jpg" alt="Гора Эльбрус"/>
             <div class="element__maskgroup">
               <h2 class="element__title">Гора Эльбрус</h2>
               <button  class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./image/like.svg" alt="Сердечко"/>
+                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
               </button>
             </div>
           </div>
           <div class="element">
-            <img class="element__image" src="./image/domb.jpg" alt="Домбай"/>
+            <img class="element__image" src="./images/domb.jpg" alt="Домбай"/>
             <div class="element__maskgroup">
               <h2 class="element__title">Домбай</h2>
               <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./image/like.svg" alt="Сердечко"/>
+                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
               </button>
             </div>
           </div>
           <div class="element">
-            <img class="element__image" src="./image/elb.jpg" alt="Гора Эльбрус"/>
+            <img class="element__image" src="./images/elb.jpg" alt="Гора Эльбрус"/>
             <div class="element__maskgroup">
               <h2 class="element__title">Гора Эльбрус</h2>
               <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./image/like.svg" alt="Сердечко"/>
+                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
               </button>
             </div>
           </div>
           <div class="element">
-            <img class="element__image" src="./image/domb.jpg" alt="Домбай"/>
+            <img class="element__image" src="./images/domb.jpg" alt="Домбай"/>
             <div class="element__maskgroup">
               <h2 class="element__title">Домбай</h2>
-              <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./image/like.svg" alt="Сердечко"/>
+              <button class="element__button element__vector element__vector_active" type="button">
+                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
               </button>
             </div>
           </div>
           <div class="element">
-            <img class="element__image" src="./image/karach.jpg" alt="Карачаево-Черкессия"/>
+            <img class="element__image" src="./images/karach.jpg" alt="Карачаево-Черкессия"/>
             <div class="element__maskgroup">
               <h2 class="element__title">Карачаево-Черкессия</h2>
               <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./image/like.svg" alt="Сердечко"/>
+                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
               </button>
             </div>
           </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">2022 Протасенко Вячеслав</p>
-      </footer>
-    <div class="popup">
-      <div class="popup__container">
-        <h2 class="popup__heading">Редактировать профиль</h2>
+    </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2022 Протасенко Вячеслав</p>
+    </footer>
+  </div>
+  <div class="popup">
+    <div class="popup__container">
+      <h2 class="popup__heading">Редактировать профиль</h2>
         <form class="popup__form" name="forma">
           <input class="popup__input popup__input_type_name" name="name" type="text" value=""/>
           <input class="popup__input popup__input_type_info" name="name" type="text" value=""/>
@@ -99,6 +95,6 @@
         <button class="popup__button-res" type="button"></button>
       </div>
     </div>
-    <script src="./script/script.js"></script>
-  </body>
+  <script src="./script/script.js"></script>
+</body>
 </html>

@@ -1,12 +1,25 @@
 .element {
   border-radius: 10px;
-  white-space: nowrap;
   background: #ffffff;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  position: relative;
   max-width: 282px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  height: 361px;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .element {
+    justify-self: end;
+  }
+  .element:nth-of-type(2n) {
+    justify-self: start;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .element {
+    justify-self: center;
+  }
+  .element:nth-of-type(2n) {
+    justify-self: center;
+  }
 }
