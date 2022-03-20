@@ -22,12 +22,14 @@
   transition: opacity 0.5s ease; 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .popup__button-save {
     width: 238px;
     height: 46px;
     font-size: 14px;
     line-height: 17px;
     margin-left: 22px;
+    margin-right: 22px;
+    margin-bottom: 25px;
   }
 }
