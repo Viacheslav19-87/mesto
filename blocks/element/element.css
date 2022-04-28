@@ -1,4 +1,6 @@
 .element {
+  display: grid;
+  gap: 20px;
   border-radius: 10px;
   background: #ffffff;
   max-width: 282px;

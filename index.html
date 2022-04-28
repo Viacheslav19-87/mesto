@@ -7,11 +7,13 @@
   <title>Mesto</title>
 </head>
 <body class="page">
-  <div>
+<!--Блок HEADER-->
     <header class="header">
        <img src="./images/header__logo.svg" class="header__logo" alt="Логотип проекта Место">
     </header>  
-    <main class="main">
+<!--Блок MAIN-->
+  <main class="main">
+<!--Блок PROFILE-->
     <section  class="profile">
       <div class="profile__avatar"></div>
       <div class="profile__info">
@@ -21,82 +23,60 @@
       </div>
         <p class="profile__subtitle">Исследователь океана</p>
       </div>
-      <input type="button" value=" " class="profile__addbutton">
+      <button class="profile__addbutton" type="button" value="">
     </section>
+<!--Блок ELEMENTS-->    
     <section class="elements">
-          <div class="element">
-            <img class="element__image" src="./images/karach.jpg" alt="Карачаевск"/>
-            <div class="element__maskgroup">
-              <h2 class="element__title">Карачаевск</h2>
-              <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
-              </button>
-            </div>
-          </div>
-          <div class="element">
-            <img class="element__image" src="./images/elb.jpg" alt="Гора Эльбрус"/>
-            <div class="element__maskgroup">
-              <h2 class="element__title">Гора Эльбрус</h2>
-              <button  class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
-              </button>
-            </div>
-          </div>
-          <div class="element">
-            <img class="element__image" src="./images/domb.jpg" alt="Домбай"/>
-            <div class="element__maskgroup">
-              <h2 class="element__title">Домбай</h2>
-              <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
-              </button>
-            </div>
-          </div>
-          <div class="element">
-            <img class="element__image" src="./images/elb.jpg" alt="Гора Эльбрус"/>
-            <div class="element__maskgroup">
-              <h2 class="element__title">Гора Эльбрус</h2>
-              <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
-              </button>
-            </div>
-          </div>
-          <div class="element">
-            <img class="element__image" src="./images/domb.jpg" alt="Домбай"/>
-            <div class="element__maskgroup">
-              <h2 class="element__title">Домбай</h2>
-              <button class="element__button element__vector element__vector_active" type="button">
-                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
-              </button>
-            </div>
-          </div>
-          <div class="element">
-            <img class="element__image" src="./images/karach.jpg" alt="Карачаево-Черкессия"/>
-            <div class="element__maskgroup">
-              <h2 class="element__title">Карачаево-Черкессия</h2>
-              <button class="element__button" type="button">
-                <img class="element__vector element__vector_active" src="./images/like.svg" alt="Сердечко"/>
-              </button>
-            </div>
-          </div>
-    </section>
-    </main>
+      <ul class="cards_list">
+      </ul>
+    </section>     
+  </main>
+<!--Блок FOOTER-->     
     <footer class="footer">
       <p class="footer__copyright">© 2022 Протасенко Вячеслав</p>
     </footer>
-  </div>
-  <div class="popup">
+<!--POPUP профиля--> 
+  <div class="popup popup-profile">
     <div class="popup__container">
       <h2 class="popup__heading">Редактировать профиль</h2>
-        <form class="popup__form" name="forma">
-          <input class="popup__input popup__input_type_name" name="name" type="text" value=""/>
-          <input class="popup__input popup__input_type_info" name="name" type="text" value=""/>
+        <form class="popup__form popup_form_profile" name="forma">
+          <input id="input_type_name" class="popup__input popup__input_type_name" name="name" type="text" value=""/>
+          <input id="input_type_info" class="popup__input popup__input_type_info" name="name" type="text" value=""/>
           <button class="popup__button-save" type="submit">Сохранить</button>
+          <button class="popup__button-res popup__button-res_profile" type="button"></button>
         </form>
-        <button class="popup__button-res" type="button"></button>
-      </div>
     </div>
+  </div>
+<!--POPUP добавление карточек--> 
+  <div class="popup popup_add_item">
+    <div class="popup__container">
+      <h2 class="popup__heading">Новое место</h2>
+      <form class="popup__form popup_form_item" name="formitem">
+        <input id="input_type_nme" class="popup__input popup__container_type_name" name="name" type="text" placeholder="Название"/>
+        <input id="input_type_lnk" class="popup__input popup__container_type_lnk" name="img" type="url" placeholder="Ссылка на картинку"/>
+        <button type="submit" class="popup__button-save popup__item_button-save">Создать</button>
+        <button class="popup__button-res popup__button-res_cards" type="button"></button>
+      </form>  
+    </div>
+  </div>
+  <div class="popup popup_open-img">
+    <div class="popap__container popup__icon">
+      <img class="popup__image" src="#" alt=""/>
+      <h2 class="popup__subtitle"></h2>
+      <button class="popup__button-res popup__button-res_image" type="button"></button>
+     </div>
+  </div>
+<!--TEMPLATE--> 
+  <template id="template">
+    <li class="element">
+      <img class="element__image" src="" alt="Карточка"/>
+      <button class="element__delete" type="button"></button>
+      <div class="element__maskgroup">
+        <h2 class="element__title"></h2>
+        <button type="button" class="element__vector"></button>
+      </div>
+    </li>
+  </template>  
   <script src="./script/script.js"></script>
 </body>
 </html>
-<!--Любовь, спасибо Вам за помощь и подсказки, адаптивная верстка мне далась тяжело. Наставник рекомендовал пройти курс заново, чем я занимался.
-Все вправки внес, к сожалению, белые полосы я у себя и раньше не видел при прокрутке и сейчас не вижу, перенес класс page как Вы рекомендовали.-->
