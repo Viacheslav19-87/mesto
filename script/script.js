@@ -27,7 +27,7 @@ const initialCards = [
 
 const popups = document.querySelectorAll('.popup');
 const ProfileEditButton = document.querySelector('.profile__edit-button');
-const closeButtonProfile = document.querySelector('popup__button-res_profile');
+const closeButtonProfile = document.querySelector('.popup__button-res_profile');
 const ProfileAddButton = document.querySelector('.profile__addbutton');
 const closeButtonCards = document.querySelector('.popup__button-res_cards');
 const closeButtonImage = document.querySelector('.popup__button-res_image');
