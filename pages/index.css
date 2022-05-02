@@ -34,3 +34,4 @@
 @import url(../blocks/popup/__icon/popup__icon.css);
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__subtitle/popup__subtitle.css);
+@import url(../blocks/popup/_open-img/popup_open-img.css);

@@ -13,7 +13,3 @@
   opacity: 0;
   transition: opacity 0.7s, visibility 0.7s linear;
 }
-
-.popup:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}

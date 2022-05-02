@@ -15,7 +15,7 @@ const inputTypeInfo = formProfile.querySelector('#input_type_info');
 const formCard = document.forms['formitem'];
 const inputTypeNme = formCard.querySelector('#input_type_nme');
 const inputTypeLnk = formCard.querySelector('#input_type_lnk');
-const Template = document.querySelector('#template').content;
+const template = document.querySelector('#template').content;
 const elementsPlace = document.querySelector('.elements');
 const popupImage = popupZoomImage.querySelector('.popup__image');
 const popupSubtitle = popupZoomImage.querySelector('.popup__subtitle');
@@ -29,7 +29,7 @@ function closePopup(popup) {
 }
 
 function createCard({link, name}) {
-  const cardItem = Template.querySelector('.element').cloneNode(true);
+  const cardItem = template.querySelector('.element').cloneNode(true);
   const image = cardItem.querySelector('.element__image');
   const title = cardItem.querySelector('.element__title');
 

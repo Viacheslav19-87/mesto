@@ -2,4 +2,5 @@
   width: 75vw;
   height: 75vh;
   object-fit: cover;
+  background-color: rgba(0, 0, 0, 0.5);
 }
