@@ -4,7 +4,7 @@ const config = {
   submitButtonSelector: '.popup__button-save',
   inactiveButtonClass: '.popup__button-invalid',
   inputErrorClass: '.popup__input_type_error',
-  errorClass: '.popup__input_error-active'
+  errorClass: '.popup__input_err-active'
 };
 
 const buttonElement = document.querySelector(config.submitButtonSelector);
