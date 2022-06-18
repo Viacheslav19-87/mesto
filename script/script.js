@@ -1,4 +1,3 @@
-
 const popups = document.querySelectorAll('.popup');
 const profileEditButton = document.querySelector('.profile__edit-button');
 const buttonCloseProfile = document.querySelector('.popup__button-res_profile');
@@ -86,6 +85,7 @@ profileEditButton.addEventListener('click', () => {
   inputTypeName.value = profileName.textContent;
   inputTypeInfo.value = profileInfo.textContent;
   openPopup(popupProfile);
+  resetError(popupProfile);
 });
 
 {if(buttonCloseProfile)
@@ -110,6 +110,13 @@ closeButtonImage.addEventListener('click', () => {
 formProfile.addEventListener('submit', addFormProfile);
 
 formCard.addEventListener('submit', addFormItem);
+
+function resetError(formElement) {
+  const formInputs = Array.from(formElement.querySelectorAll(config.inputSelector));
+  formInputs.forEach(inputElement => {
+    hideInputError(formElement, inputElement, config);
+  });
+}
 
 popups.forEach(popup => {
   popup.addEventListener('click', (fnc) => {
