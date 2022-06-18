@@ -4,13 +4,21 @@ const config = {
   submitButtonSelector: '.popup__button-save',
   inactiveButtonClass: 'popup__button-invalid',
   inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__input_err-active'
+  errorClass: '.popup__input_err-active'
 };
 
 function hasInvalidInput(inputList) {
   return inputList.some((inputElement) => {
   return !inputElement.validity.valid;
   });
+}
+
+function toggleButtonState(inputList, buttonElement, config) {
+  if (hasInvalidInput(inputList)) {
+    disabledButtonSubmit(buttonElement, config);
+  } else {
+    enabledButtonSubmit(buttonElement, config);
+  }
 }
 
 function setEventListener(formElement, config) {
@@ -46,17 +54,8 @@ function enabledButtonSubmit(buttonElement, config) {
   buttonElement.classList.remove(config.inactiveButtonClass);
 };
 
-function toggleButtonState(inputList, buttonElement, config) {
-  if (hasInvalidInput(inputList)) {
-    disabledButtonSubmit(buttonElement, config);
-  } else {
-    enabledButtonSubmit(buttonElement, config);
-  }
-}
-
 const showInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-
   inputElement.classList.add(config.inputErrorClass);
   errorElement.textContent = inputElement.errorMessage;
   errorElement.classList.add(config.errorClass)
@@ -64,7 +63,6 @@ const showInputError = (formElement, inputElement, config) => {
 
 const hideInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-
   inputElement.classList.remove(config.inputErrorClass);
   errorElement.classList.remove(config.errorClass);
   errorElement.textContent = '';
