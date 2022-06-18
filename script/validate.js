@@ -4,7 +4,7 @@ const config = {
   submitButtonSelector: '.popup__button-save',
   inactiveButtonClass: 'popup__button-invalid',
   inputErrorClass: 'popup__input_type_error',
-  errorClass: '.popup__input_err-active'
+  errorClass: 'popup__input_err-active'
 };
 
 function hasInvalidInput(inputList) {
@@ -56,13 +56,14 @@ function enabledButtonSubmit(buttonElement, config) {
 
 const showInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+  errorElement.textContent = inputElement.validationMessage;
   inputElement.classList.add(config.inputErrorClass);
-  errorElement.textContent = inputElement.errorMessage;
-  errorElement.classList.add(config.errorClass)
+  errorElement.classList.add(config.errorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+
   inputElement.classList.remove(config.inputErrorClass);
   errorElement.classList.remove(config.errorClass);
   errorElement.textContent = '';
