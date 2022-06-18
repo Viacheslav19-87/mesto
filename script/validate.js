@@ -2,9 +2,9 @@ const config = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button-save',
-  inactiveButtonClass: '.popup__button-invalid',
-  inputErrorClass: '.popup__input_type_error',
-  errorClass: '.popup__input_err-active'
+  inactiveButtonClass: 'popup__button-invalid',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__input_err-active'
 };
 
 function hasInvalidInput(inputList) {
