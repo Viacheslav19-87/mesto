@@ -41,28 +41,28 @@ function createCard({link, name}) {
   title.textContent = name;
 
   const like = cardItem.querySelector('.element__vector');
-  like.addEventListener('click', (fnc) => {
-    fnc.target.classList.toggle('element__vector_active');
+  like.addEventListener('click', (evt) => {
+    evt.target.classList.toggle('element__vector_active');
   });
 
   const dlt = cardItem.querySelector('.element__delete');
-  dlt.addEventListener('click', (fnc) => {
-    const dltItemCard = fnc.target.closest('.element');
+  dlt.addEventListener('click', (evt) => {
+    const dltItemCard = evt.target.closest('.element');
     dltItemCard.remove();
   });
 
-  image.addEventListener('click', (fnc) => {
-    popupImage.src = fnc.target.src;
-    popupImage.alt = fnc.target.alt;
-    popupSubtitle.textContent = fnc.target.alt;
+  image.addEventListener('click', (evt) => {
+    popupImage.src = evt.target.src;
+    popupImage.alt = evt.target.alt;
+    popupSubtitle.textContent = evt.target.alt;
     openPopup(popupZoomImage);
   });
 
   return cardItem;
 }
 
-function addFormItem (fnc) {
-  fnc.preventDefault();
+function addFormItem (evt) {
+  evt.preventDefault();
 
   const cardItem = createCard({link: inputTypeLnk.value, name: inputTypeNme.value});
   elementsPlace.prepend(cardItem);
@@ -71,8 +71,8 @@ function addFormItem (fnc) {
   formCard.reset();
 }
 
-function addFormProfile (fnc) {
-  fnc.preventDefault();
+function addFormProfile (evt) {
+  evt.preventDefault();
   
   profileName.textContent = inputTypeName.value;
   profileInfo.textContent = inputTypeInfo.value;
@@ -117,8 +117,8 @@ formProfile.addEventListener('submit', addFormProfile);
 formCard.addEventListener('submit', addFormItem);
 
 popups.forEach(popup => {
-  popup.addEventListener('click', (fnc) => {
-    if (fnc.target.classList.contains('popup_open')) {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('popup_open')) {
       closePopup(popup);
     }
   })
