@@ -19,13 +19,16 @@ const template = document.querySelector('#template').content;
 const elementsPlace = document.querySelector('.elements');
 const popupImage = popupZoomImage.querySelector('.popup__image');
 const popupSubtitle = popupZoomImage.querySelector('.popup__subtitle');
+const submitButton = formCard.querySelector('.popup__button-save');
 
 function openPopup(popup) {
   popup.classList.add('popup_open');
+  document.addEventListener('keydown', closePopupEsc);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_open');
+  document.removeEventListener('keydown', closePopupEsc);
 }
 
 function createCard({link, name}) {
@@ -64,6 +67,7 @@ function addFormItem (fnc) {
   const cardItem = createCard({link: inputTypeLnk.value, name: inputTypeNme.value});
   elementsPlace.prepend(cardItem);
   closePopup(popupCards);
+  disabledButtonSubmit(submitButton, config);
   formCard.reset();
 }
 
@@ -101,6 +105,7 @@ profileAddButton.addEventListener('click', () => {
 
 closeButtonCards.addEventListener('click', () => {
   closePopup(popupCards);
+  
 });
 
 closeButtonImage.addEventListener('click', () => {
@@ -111,13 +116,6 @@ formProfile.addEventListener('submit', addFormProfile);
 
 formCard.addEventListener('submit', addFormItem);
 
-function resetError(formElement) {
-  const formInputs = Array.from(formElement.querySelectorAll(config.inputSelector));
-  formInputs.forEach(inputElement => {
-    hideInputError(formElement, inputElement, config);
-  });
-}
-
 popups.forEach(popup => {
   popup.addEventListener('click', (fnc) => {
     if (fnc.target.classList.contains('popup_open')) {
@@ -126,12 +124,8 @@ popups.forEach(popup => {
   })
 })
 
-document.addEventListener('keydown', (fnc) => {
-  if (fnc.code === 'Escape') {
-    popups.forEach(popup => {
-      if (popup.classList.contains('popup_open')) {
-        closePopup(popup);
-      }
-    });
+const closePopupEsc = evt => {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_open'));
   }
-});
+}

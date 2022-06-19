@@ -7,6 +7,7 @@ const config = {
   errorClass: 'popup__input-err-active'
 };
 
+
 function hasInvalidInput(inputList) {
   return inputList.some((inputElement) => {
   return !inputElement.validity.valid;
@@ -57,8 +58,10 @@ function enabledButtonSubmit(buttonElement, config) {
 const showInputError = (formElement, inputElement, config) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   errorElement.textContent = inputElement.validationMessage;
-  inputElement.classList.add(config.inputErrorClass);
   errorElement.classList.add(config.errorClass);
+  inputElement.classList.add(config.inputErrorClass);
+ 
+ 
 };
 
 const hideInputError = (formElement, inputElement, config) => {
@@ -68,6 +71,13 @@ const hideInputError = (formElement, inputElement, config) => {
   errorElement.classList.remove(config.errorClass);
   errorElement.textContent = '';
 };
+
+function resetError(formElement) {
+  const formInputs = Array.from(formElement.querySelectorAll(config.inputSelector));
+  formInputs.forEach(inputElement => {
+    hideInputError(formElement, inputElement, config);
+  });
+}
 
 const checkInputValidity = (formElement, inputElement, config) => {
   if (!inputElement.validity.valid) {

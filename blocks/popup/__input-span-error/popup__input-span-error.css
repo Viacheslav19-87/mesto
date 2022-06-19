@@ -1,10 +1,11 @@
 .popup__input-span-error {
   visibility: hidden;
   font-family: 'Inter';
+  font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1px;
   color: #FF0000;
   margin-left: 35px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
