@@ -1,9 +1,9 @@
 .popup__input_error {
-  display: flex;
   visibility: hidden;
   font-family: 'Inter';
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: #FF0000;
+  margin-left: 35px;
 }
