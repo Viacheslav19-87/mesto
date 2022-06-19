@@ -1,18 +1,15 @@
 .popup__input-container {
-  max-width: 430px;
   width: 100%;
   padding-bottom: 37px;
   background-color: #FFFFFF;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  outline: none;
 }
 
 @media screen and (max-width: 600px) {
   .popup__input-container {
     max-width: 238px;
     width: 100%;
-    padding-bottom: 25px;
   }
 }
