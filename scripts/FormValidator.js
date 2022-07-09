@@ -8,15 +8,12 @@ export class FormValidator {
     this._errorClass = config.errorClass;
     this._formElement = formElement;
   }
-
-    // проверяем инпуты на валидность
   _hasInvalidInput() {
     return this._inputList.some((inputElement) => {
       return !inputElement.validity.valid;
     });
   }
 
-    // меняем состояние сабмита, при наличии ошибки ввода в инпуте
   _toggleButtonState() {
     if(this._hasInvalidInput()) {
       this.disabledButtonSubmit();
@@ -25,7 +22,6 @@ export class FormValidator {
     }
   }
 
-    // вывод/скрытие сообщения об ошибке
   _checkInputValidity(inputElement) {
     if(!inputElement.validity.valid) {
       this._showInputError(inputElement);
@@ -34,7 +30,6 @@ export class FormValidator {
     }
   };
 
-    // слушаем все инпуты на правильность ввода
   _setEventListener() {
     this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
     this._buttonElement = this._formElement.querySelector(this._submitButtonSelector);
@@ -48,7 +43,6 @@ export class FormValidator {
     });
   }
 
-    // сброс ошибок, метод передается в слушатель открытия попапа редактирования профиля
   resetError() {
     this._inputList.forEach((inputElement) => {
       this._hideInputError(inputElement);
@@ -65,7 +59,6 @@ export class FormValidator {
     this._buttonElement.classList.remove(this._inactiveButtonClass);
   };
 
-  // функция добавления класса с ошибкой ввода
   _showInputError(inputElement) {
     this._error = this._formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(this._inputErrorClass);
