@@ -15,17 +15,17 @@ export class FormValidator {
   }
 
   _toggleButtonState() {
-    if(this._hasInvalidInput()) {
+    if (this._hasInvalidInput()) {
       this.disabledButtonSubmit();
-    }else{
+    } else {
       this._enabledButtonSubmit();
     }
   }
 
   _checkInputValidity(inputElement) {
-    if(!inputElement.validity.valid) {
+    if (!inputElement.validity.valid) {
       this._showInputError(inputElement);
-    }else{
+    } else {
       this._hideInputError(inputElement);
     }
   };
