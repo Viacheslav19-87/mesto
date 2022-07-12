@@ -15,7 +15,7 @@ inputPlaceNameNewPlace,
 inputLinkNewPlace,
 inputImage,
 inputImageName,
-popupOpenProfile,
+profileEditButton,
 buttonOpenPopupCards,
 formElementProfile,
 formElementNewPlace,
@@ -62,7 +62,7 @@ const userInfo = new UserInfo({
 });
 
 const popupProfile = new PopupWithForm({
-  popupSelector: '.popup-profile',
+  popupSelector: ".popup-profile",
   handleFormSubmit: (inputValues) => {
     userInfo.setUserInfo(inputValues);
     popupProfile.close();
@@ -87,7 +87,7 @@ const popupImage = new PopupWithForm({
 
 popupImage.setEventListeners();
 
-popupOpenProfile.addEventListener("click", () => {
+profileEditButton.addEventListener("click", () => {
   const getUserInfo = userInfo.getUserInfo();
   topInputProfile.value = getUserInfo.name;
   bottomInputProfile.value = getUserInfo.about;
