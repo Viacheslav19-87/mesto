@@ -37,7 +37,7 @@ const cardValidator = new FormValidator(classListObject, formElementNewPlace);
 profileValidator.enableValidation();
 cardValidator.enableValidation();
 
-const openPopupImage = new PopupWithImage('.popup__image');
+const openPopupImage = new PopupWithImage('.popup_open-img');
 openPopupImage.setEventListeners();
 
 function generateCard(data) {
