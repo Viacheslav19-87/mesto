@@ -88,17 +88,13 @@ const popupImage = new PopupWithForm({
 popupImage.setEventListeners();
 
 profileEditButton.addEventListener("click", () => {
-  const getUserInfo = userInfo.getUserInfo();
-  topInputProfile.value = getUserInfo.name;
-  bottomInputProfile.value = getUserInfo.about;
-
-  popupProfile.open();
-  profileValidator.resetForm();
+ popupProfile.open();
+ profileValidator.resetError();
 });
 
 buttonOpenPopupCards.addEventListener("click", () => {
   popupImage.open();
-  cardValidator.resetForm();
+  cardValidator.resetError();
   inputImageName.value = '';
   inputImage.value = '';
 });
