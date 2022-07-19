@@ -75,12 +75,8 @@ popupProfile.setEventListeners();
 const popupImage = new PopupWithForm({
   popupSelector: ".popup_add-item",
 
-  handleFormSubmit() {
-    const card = generateCard({
-      name: inputPlaceNameNewPlace.value,
-      link: inputLinkNewPlace.value
-    });
-
+  handleFormSubmit(inputValues) {
+    const card = generateCard(inputValues);
     section.addItem(card);
     popupImage.close();
   }
@@ -89,12 +85,17 @@ const popupImage = new PopupWithForm({
 popupImage.setEventListeners();
 
 profileEditButton.addEventListener("click", () => {
+
+ const getUserInfo = userInfo.getUserInfo();
+ topInputProfile.value = getUserInfo.title
+ bottomInputProfile.value = getUserInfo.subtitle
  popupProfile.open();
  profileValidator.resetError();
 });
 
 buttonOpenPopupCards.addEventListener("click", () => {
   popupImage.open();
+  cardValidator.disabledButtonSubmit();
   cardValidator.resetError();
   inputImageName.value = '';
   inputImage.value = '';
