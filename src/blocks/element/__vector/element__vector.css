@@ -5,7 +5,8 @@
   outline: none;
   cursor: pointer;
   background: url(../../../images/like.svg);
-  margin: 10px 20px 30px 0;
+  margin-right: -14px;
+  padding: 0;
 }
 
 .element__vector:hover {
