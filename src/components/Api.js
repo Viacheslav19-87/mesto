@@ -35,7 +35,7 @@ export default class Api {
                 headers: this._headers,
                 body: JSON.stringify({
                     name: data.name,
-                    about: data.job
+                    about: data.about
                 })
             })
             .then(res => {
@@ -68,8 +68,9 @@ export default class Api {
             .then(res => {
                 return this._checkResponse(res);
             })
+            
     }
-
+    
     deleteCard(cardId) {
         return fetch(`${this._url}/cards/${cardId}`, {
                 method: 'DELETE',

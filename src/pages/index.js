@@ -195,12 +195,12 @@ function openProfile() {
 
 function openCard() {
   popupCreateCard.open();
-  createCardValidation.clearErrors();
+  cardValidator.resetError();
 };
 
 function openAvatar() {
   popupWithAvatar.open();
-  avatarValidation.clearErrors();
+  // avatarValidation.resetError();
 };
 
 Promise.all([api.getUserData(), api.getInitialCards()])
