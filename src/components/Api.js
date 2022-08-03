@@ -48,7 +48,7 @@ export default class Api {
                 method: 'PATCH',
                 headers: this._headers,
                 body: JSON.stringify({
-                    avatar: item.link
+                    avatar: item.avatar
                 })
             })
             .then(res => {
@@ -62,7 +62,7 @@ export default class Api {
                 headers: this._headers,
                 body: JSON.stringify({
                     name: item.name,
-                    link: item.link
+                    link: item.img
                 })
             })
             .then(res => {

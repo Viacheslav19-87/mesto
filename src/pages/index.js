@@ -162,8 +162,10 @@ const popupCreateCard = new PopupWithForm({
         popupCreateCard.setLoadingText(submitBottonText);
       })
   }
+  
 });
 popupCreateCard.setEventListeners();
+
 
 const popupWithConfirm = new PopupWithConfirmation({
   popupSelector: '.popup_delete',
@@ -196,11 +198,13 @@ function openProfile() {
 function openCard() {
   popupCreateCard.open();
   cardValidator.resetError();
+  cardValidator.disabledButtonSubmit();
 };
 
 function openAvatar() {
   popupWithAvatar.open();
-  // avatarValidation.resetError();
+  avatarValidation.resetError();
+  avatarValidation.disabledButtonSubmit();
 };
 
 Promise.all([api.getUserData(), api.getInitialCards()])
