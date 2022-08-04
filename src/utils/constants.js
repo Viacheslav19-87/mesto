@@ -22,6 +22,5 @@ export const topInputProfile = document.querySelector(".popup__input_type_name")
 export const bottomInputProfile = document.querySelector(".popup__input_type_info");
 export const inputImage = document.querySelector('#input-type-nme');
 export const inputImageName = document.querySelector('#input-type-lnk');
-export const inputFormAvatar = document.querySelector('.popup__input_type_url-avatar');
 export const formElementAvatar = document.querySelector('.popup__form_avatar');
 export const buttonAvatarEdit = document.querySelector('.profile__avatar-edit-button')
