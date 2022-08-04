@@ -169,7 +169,7 @@ popupCreateCard.setEventListeners();
 
 const popupWithConfirm = new PopupWithConfirmation({
   popupSelector: '.popup_delete',
-  handlerSubmit: (card) => {
+  handleSubmit: (card) => {
     const submitBottonText = popupWithConfirm.getSubmitBottonText();
     popupWithConfirm.setLoadingText('Удаление...');
     api.deleteCard(card.getCardId())
@@ -185,7 +185,8 @@ const popupWithConfirm = new PopupWithConfirmation({
       })
   }
 })
-popupWithConfirm.setEventListeners();
+
+popupWithConfirm.setEventListeners()
 
 function openProfile() {
   const getUserInfo = userInfo.getUserInfo();

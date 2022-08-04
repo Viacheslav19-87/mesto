@@ -85,7 +85,7 @@
         <h2 class="popup__heading">Обновить аватар</h2>
         <div class="form__container">
           <input id="avatar" class="popup__input popup__input_type_url-avatar" name="avatar" type="url" placeholder="Ссылка на картинку" required>
-          <span class="popup__input-span-error" id="avatar-error"></span>
+          <span class="popup__input-span-error avatar-error" id="avatar-error"></span>
         </div>
         <button type="submit" class="popup__button-save">Сохранить</button>
       </form>
@@ -94,7 +94,7 @@
 
 <!--POPUP удаления--> 
   <div class="popup popup_delete">
-    <div class="popup__container-small">
+    <div class="popup__container-delete">
       <button type="button" class="popup__button-res popup__button-res_delete"></button>
       <form class="popup__form popup__form_submit-deleting" name="form-submit-deleting" novalidate>
         <h2 class="popup__heading">Вы уверены?</h2>
@@ -115,6 +115,5 @@
       </div>
     </li>
   </template>
- <script type="module" src="./pages/index.js"></script>
 </body>
 </html>

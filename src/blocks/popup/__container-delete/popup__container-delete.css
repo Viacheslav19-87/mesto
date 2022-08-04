@@ -1,11 +1,11 @@
-.popup__container-small {
+.popup__container-delete {
   width: 430px;
-  height: 272px;
+  height: 181px;
   position: relative;
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  align-items: center;
+  padding-bottom: 46px;
 }
 
 @media screen and (max-width: 767px) {
